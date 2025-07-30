@@ -1,0 +1,12 @@
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas comunes
+vendor/
+node_modules/
+.env
+*.log
+
+# Ignorar XAMPP
+xampp/
