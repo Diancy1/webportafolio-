@@ -1,0 +1,175 @@
+/* ================== stylo login.php ================== */
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --input-bg-color: #21262e;
+    --input-focus-outline: 2px solid var(--main-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.login-container {
+    background-color: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.15);
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-group i {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: var(--main-color);
+}
+
+.form-group input:focus {
+    outline: var(--input-focus-outline);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 10px;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00c9e0;
+}
+
+.login-container p {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1.2rem;
+}
+
+.redes a {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.redes a:hover {
+    color: #00c9e0;
+    transform: scale(1.2);
+}
+
+/* ================== RESPONSIVE DETALLADO ================== */
+
+/* Teléfonos pequeños */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.2rem;
+        max-width: 95%;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input {
+        padding: 0.9rem 1rem 0.9rem 2.5rem;
+        font-size: 0.95rem;
+    }
+
+    .redes a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Teléfonos grandes y tabletas pequeñas */
+@media (min-width: 481px) and (max-width: 768px) {
+    .login-container {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+
+    .login-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .form-group input {
+        padding: 1rem 1rem 1rem 2.7rem;
+    }
+}
+
+/* Tabletas horizontales y laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .login-container {
+        max-width: 450px;
+    }
+
+    .login-container h2 {
+        font-size: 1.9rem;
+    }
+}
+
+/* Pantallas grandes (PC) */
+@media (min-width: 1025px) {
+    .login-container {
+        max-width: 500px;
+    }
+
+    .login-container h2 {
+        font-size: 2rem;
+    }
+}
